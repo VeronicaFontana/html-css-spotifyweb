@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+  --side-bar-color: black;
+  --central-color: #141922;
+  --bottom-bar-color: #282828;
+  --text-color: #7B7D81;
+}
+
+/* FOOTER - BOTTOM BAR */
+
