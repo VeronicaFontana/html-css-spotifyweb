@@ -8,12 +8,86 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+main{
+  display: flex;
+}
+
 :root{
-  --side-bar-color: black;
-  --central-color: #141922;
+  --top-bar-color: #0404044e;
+  --side-bar-color: #000000;
+  --interface-color: #141922;
   --bottom-bar-color: #282828;
   --text-color: #7B7D81;
 }
 
+/* MAIN */
+/* SIDE BAR */
+.side-bar{
+  background-color: var(--side-bar-color);
+  height: calc(100vh - 90px);
+  width: 250px;
+}
+
+.user{
+  border: 1px solid red;
+  height: 80px;
+  width: 100%;
+}
+
+.menu{
+  border: 1px solid green;
+  height: calc(100% - 80px);
+  width: 100%;
+}
+
+/* TOP BAR */
+.top-bar{
+  background-color: var(--top-bar-color);
+  height: 90px;
+  width: calc(100vw - 250px);
+  position: fixed;
+  z-index: 999;
+}
+
+/* INTERFACE */
+.interface{
+  background-color: var(--interface-color);
+  height: calc(100vh - 90px);
+  width: calc(100vw - 250px);
+}
+
+.interface-container{
+  border: 1px solid pink;
+  height: 100%;
+  width: 100%;
+  padding: 100px 20px 20px 10px;
+  overflow: auto;
+}
+
+
 /* FOOTER - BOTTOM BAR */
+.bottom-bar{
+  background-color: var(--bottom-bar-color);
+  height: 90px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.song, .player, .volume{
+  border: 1px solid blue;
+}
+
+.player{
+  height: 100%;
+  width: 50%;
+}
+
+.song, .volume{
+  height: 100%;
+  width: 25%;
+}
+
+
+
 
