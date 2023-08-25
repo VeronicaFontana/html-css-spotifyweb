@@ -7,6 +7,7 @@
 body{
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 main{
@@ -35,7 +36,6 @@ span:hover, li:hover, i:hover{
 /* SIDE BAR */
 .side-bar{
   background-color: var(--side-bar-color);
-  font-weight: bold;
   height: calc(100vh - 90px);
   width: 220px;
   padding: 0 15px;
@@ -143,7 +143,6 @@ hr{
 .top-bar button{
   background-color: var(--top-bar-color);
   color: white;
-  font-weight: bold;
   text-transform: uppercase;
   border: 1px solid white;
   border-radius: 30px;
@@ -183,27 +182,28 @@ hr{
 .categories-menu li{
   padding: 0 10px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .recently{
   margin: 30px 0;
 }
 
-.recently span{
+.recently span:first-of-type, .for-you span:first-of-type, .popular span:first-of-type{
   color: white;
   font-size: 1.4rem;
-  font-weight: bold;
 }
 
 .row{
   width: 100%;
   margin: 20px 0;
   display: flex;
+}
+
+.recently .row{
   justify-content: space-between;
 }
 
-.col{
+.recently .col{
   width: calc(100% / 6 - 30px);
 }
 
@@ -234,8 +234,22 @@ hr{
   color: var(--text-color);
 }
 
+.for-you .col, .popular .col{
+  width: calc(100% / 6 - 30px);
+}
 
+.for-you div:first-child, .popular div:first-child{
+  display: flex;
+  flex-direction: column;
+}
 
+.for-you div:first-child span:first-child, .popular div:first-child span:first-child{
+  margin-bottom: 10px;
+}
+
+.popular img{
+  border-radius: 50%;
+}
 
 /* FOOTER - BOTTOM BAR */
 .bottom-bar{
@@ -289,7 +303,6 @@ hr{
 
 .song div:nth-child(2) span:first-child{
   color: white;
-  font-weight: bold;
 }
 
 .song div:nth-child(2) span:nth-child(2){
