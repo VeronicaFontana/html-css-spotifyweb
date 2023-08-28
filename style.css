@@ -431,7 +431,7 @@ footer{
   border-radius: 30px;
 }
 
-.fa-circle{
+#volume-bar .fa-circle, #timer .fa-circle{
   display: none;
 }
 
