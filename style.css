@@ -32,19 +32,28 @@ span:hover, li:hover, i:hover{
   color: white;
 }
 
+.active-sidebar{
+  border-left: 4px solid greenyellow;
+  background-color: #1a1a1a93;
+}
+
+.active-interface{
+  border-bottom: 4px solid greenyellow;
+}
+
 /* MAIN */
-/* SIDE BAR */
+/* SIDEBAR */
 .side-bar{
   background-color: var(--side-bar-color);
   height: calc(100vh - 90px);
   width: 220px;
-  padding: 0 15px;
 }
 
 .menu{
   height: calc(100% - 100px);
   width: 100%;
 }
+
 
 .main-menu .logo svg:nth-child(2){
   height: 80px;
@@ -65,7 +74,7 @@ span:hover, li:hover, i:hover{
 }
 
 .main-menu .icons div{
-  margin: 5px 0;
+  padding: 5px 15px;
   display: flex;
   align-items: center;
 }
@@ -77,7 +86,7 @@ span:hover, li:hover, i:hover{
 }
 
 .playlist-title{
-  margin: 10px 0;
+  padding: 10px 15px;
 }
 
 .playlist-title span:first-child{
@@ -97,12 +106,18 @@ span:hover, li:hover, i:hover{
 }
 
 .playlist{
+  padding: 0 15px;
   height: 40%;
   overflow: auto;
   line-height: 2rem;
 }
 
+.playlist ul{
+  list-style: none;
+}
+
 .user{
+  padding: 0 15px;
   height: 80px;
   width: 100%;
 }
