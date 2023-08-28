@@ -54,6 +54,7 @@ span:hover, li:hover, i:hover{
   width: 100%;
 }
 
+/* LOGO */
 .main-menu .logo svg:nth-child(2){
   margin: 0 15px;
   height: 80px;
@@ -67,6 +68,7 @@ span:hover, li:hover, i:hover{
   width: 60px;
 }
 
+/* ICONS */
 .main-menu .icons{
   margin-bottom: 20px;
   display: flex;
@@ -85,6 +87,7 @@ span:hover, li:hover, i:hover{
   margin-right: 5px;
 }
 
+/* PLAYLIST TITLE */
 .playlist-title{
   padding: 10px 15px;
 }
@@ -105,6 +108,7 @@ span:hover, li:hover, i:hover{
   margin-right: 5px;
 }
 
+/* PLAYLIST */
 .playlist{
   padding: 0 15px;
   height: 40%;
@@ -122,6 +126,7 @@ span:hover, li:hover, i:hover{
   width: 100%;
 }
 
+/* USER */
 .user div{
   display: flex;
   align-items: center;
@@ -193,6 +198,7 @@ hr{
   overflow: auto;
 }
 
+/* CATEGORIES MENU */
 .categories-menu{
   display: flex;
   justify-content: center;
@@ -208,6 +214,7 @@ hr{
   text-transform: uppercase;
 }
 
+/* RECENTLY */
 .recently{
   margin: 30px 0;
 }
@@ -269,14 +276,6 @@ hr{
   }
 }
 
-.popular .card-img:hover{
-  cursor: pointer;
-  .above-card{
-    border-radius: 50%;
-    display: block;
-  }
-}
-
 .card-text{
   margin-top: 10px;
   display: flex;
@@ -294,6 +293,7 @@ hr{
   color: var(--text-color);
 }
 
+/* FOR YOU */
 .for-you .row, .popular .row{
   width: 100%;
   justify-content: flex-start;
@@ -311,6 +311,15 @@ hr{
 
 .for-you div:first-child span:first-child, .popular div:first-child span:first-child{
   margin-bottom: 10px;
+}
+
+/* POPULAR */
+.popular .card-img:hover{
+  cursor: pointer;
+  .above-card{
+    border-radius: 50%;
+    display: block;
+  }
 }
 
 .popular img{
@@ -342,19 +351,7 @@ footer{
   width: calc(100% / 3);
 }
 
-.player{
-  flex-direction: column;
-  text-align: center;
-}
-
-.volume{
-  justify-content: flex-end;
-}
-
-.player span, .volume span, .player i, .volume i{
-  color: white;
-}
-
+/* SONG */
 .song div:nth-child(1) img{
   height: 45px;
   width: 45px;
@@ -377,6 +374,16 @@ footer{
 
 .song div:nth-child(2) span:nth-child(2):hover{
   text-decoration: underline;
+}
+
+/* PLAYER */
+.player{
+  flex-direction: column;
+  text-align: center;
+}
+
+.player span, .volume span, .player i, .volume i{
+  color: white;
 }
 
 .player div{
@@ -438,6 +445,12 @@ footer{
   .fa-circle{
     display: flex;
   }
+}
+
+
+/* VOLUME */
+.volume{
+  justify-content: flex-end;
 }
 
 .volume i{
@@ -523,5 +536,4 @@ footer{
   .user svg{
     margin-bottom: 10px;
   }
-
 }
