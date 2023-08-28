@@ -54,8 +54,8 @@ span:hover, li:hover, i:hover{
   width: 100%;
 }
 
-
 .main-menu .logo svg:nth-child(2){
+  margin: 0 15px;
   height: 80px;
   width: 130px;
 }
@@ -171,9 +171,11 @@ hr{
   border-radius: 30px;
   padding: 15px 50px;
   margin-right: 30px;
+  transition: transform;
 }
 
 .top-bar button:hover{
+  transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -254,7 +256,7 @@ hr{
 .card-img .above-card i{
   color: white;
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 5rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -293,12 +295,13 @@ hr{
 }
 
 .for-you .row, .popular .row{
-  width: calc(100% / 3 - 30px);
-  justify-content: space-between;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .for-you .col, .popular .col{
-  width: calc(100% / 2 - 20px);
+  width: calc(30% / 2);
+  margin-right: 40px;
 }
 
 .section-title{
@@ -313,7 +316,6 @@ hr{
 .popular img{
   border-radius: 50%;
 }
-
 
 
 /* FOOTER - BOTTOM BAR */
@@ -332,12 +334,12 @@ hr{
 }
 
 .song, .volume{
-  width: 350px;
+  max-width: 350px;
   margin: 0 20px;
 }
 
 .player{
-  width: calc(100vw - 600px);
+  max-width: calc(100vw - 700px);
   flex-direction: column;
   justify-content: center;
 }
@@ -374,6 +376,10 @@ hr{
   font-size: 0.7rem;
 }
 
+.song div:nth-child(2) span:nth-child(2):hover{
+  text-decoration: underline;
+}
+
 .player div:first-child i{
   padding: 0 10px;
   font-size: 15px;
@@ -390,6 +396,14 @@ hr{
 
 .player div:nth-child(2) span{
   font-size: 0.7rem;
+}
+
+.player .fa-circle-play{
+  transition: transform;
+}
+
+.player .fa-circle-play:hover{
+  transform: scale(1.2);
 }
 
 #timer{
@@ -432,18 +446,43 @@ hr{
   height: 3px;
   width: 100px;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.volume div div{
+.volume #volume-bar div{
   background-color: lightgray;
   height: 3px;
   width: 30px;
   border-radius: 30px;
 }
 
+.volume #volume-bar:hover{
+  cursor: pointer;
+}
 
+.volume #volume-bar:hover div{
+  background-color: greenyellow;
+}
+
+.volume #volume-bar:hover i{
+  padding: 0;
+  display: block;
+}
 
 /* RESPONSIVE */
+@media screen and (max-width: 1200px){
+  .interface-container .recently .row{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .interface-container .recently .row .col{
+    width: calc(100% / 4 - 15px);
+    margin: 20px 5px;
+  }
+}
+
 @media screen and (max-width: 576px){
   .side-bar{
     width: 90px;
@@ -453,6 +492,9 @@ hr{
   }
   .interface{
     width: calc(100vw - 90px);
+  }
+  .interface-container .recently .row .col{
+    width: calc(100% / 2 - 30px);
   }
   .main-menu .logo svg:nth-child(1){
     display: block;
