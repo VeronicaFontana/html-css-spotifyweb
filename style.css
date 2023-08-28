@@ -63,7 +63,6 @@ span:hover, li:hover, i:hover{
 
 .main-menu .logo svg:nth-child(1){
   display: none;
-  margin: 20px 0;
   height: 40px;
   width: 60px;
 }
@@ -206,11 +205,13 @@ hr{
 
 .categories-menu ul{
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 .categories-menu li{
-  padding: 0 10px;
+
+  padding: 10px 10px;
   text-transform: uppercase;
 }
 
@@ -330,6 +331,7 @@ hr{
 /* FOOTER - BOTTOM BAR */
 footer{
   background-color: var(--bottom-bar-color);
+  padding: 0 15px;
   height: 90px;
   width: 100vw;
   display: flex;
@@ -337,7 +339,6 @@ footer{
 }
 
 .bottom-bar{
-  margin: 0 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -345,10 +346,10 @@ footer{
 }
 
 .song, .player, .volume{
+  width: calc(100% / 3);
   height: 100%;
   display: flex;
   align-items: center;
-  width: calc(100% / 3);
 }
 
 /* SONG */
@@ -358,7 +359,7 @@ footer{
 }
 
 .song div:nth-child(2){
-  width: 200px;
+  width: 30%;
   margin: 0 10px;
   display: flex;
   flex-direction: column;
@@ -391,12 +392,7 @@ footer{
 }
 
 .player div:first-child i{
-  padding: 0 10px;
-  font-size: 15px;
-}
-
-.player div:first-child .fa-circle-play{
-  font-size: 30px;
+  padding: 2%;
 }
 
 .player div:nth-child(2){
@@ -409,6 +405,7 @@ footer{
 }
 
 .player .fa-circle-play{
+  font-size: 30px;
   transition: transform;
 }
 
@@ -419,7 +416,7 @@ footer{
 #timer{
   background-color: var(--text-color);
   height: 3px;
-  width: calc(100% -50px);
+  width: calc(100% - 50px);
   margin: 15px 20px;
   border-radius: 30px;
 }
@@ -460,7 +457,7 @@ footer{
 .volume div{
   background-color: var(--text-color);
   height: 3px;
-  width: 100px;
+  width: 20%;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -470,7 +467,7 @@ footer{
 .volume #volume-bar div{
   background-color: lightgray;
   height: 3px;
-  width: 30px;
+  width: 30%;
   border-radius: 30px;
 }
 
@@ -513,6 +510,7 @@ footer{
     width: calc(100% / 2 - 30px);
   }
   .main-menu .logo svg:nth-child(1){
+    margin: 20px 15px;
     display: block;
   }
   .main-menu .logo svg:nth-child(2){
