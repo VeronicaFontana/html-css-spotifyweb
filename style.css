@@ -42,19 +42,26 @@ span:hover, li:hover, i:hover{
 }
 
 .menu{
-  height: calc(100% - 80px);
+  height: calc(100% - 100px);
   width: 100%;
+}
+
+.main-menu .logo svg:nth-child(2){
+  height: 80px;
+  width: 130px;
+}
+
+.main-menu .logo svg:nth-child(1){
+  display: none;
+  margin: 20px 0;
+  height: 40px;
+  width: 60px;
 }
 
 .main-menu .icons{
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-}
-
-.main-menu .logo svg{
-  height: 80px;
-  width: 130px;
 }
 
 .main-menu .icons div{
@@ -127,6 +134,7 @@ hr{
 .user div:last-child span{
   color: white;
 }
+
 
 /* TOP BAR */
 .top-bar{
@@ -310,7 +318,7 @@ hr{
 
 .song, .volume{
   width: 350px;
-  padding: 0 10px;
+  margin: 0 20px;
 }
 
 .player{
@@ -420,4 +428,40 @@ hr{
 
 
 
+/* RESPONSIVE */
+@media screen and (max-width: 576px){
+  .side-bar{
+    width: 90px;
+  }
+  .top-bar{
+    width: calc(100vw - 90px);
+  }
+  .interface{
+    width: calc(100vw - 90px);
+  }
+  .main-menu .logo svg:nth-child(1){
+    display: block;
+  }
+  .main-menu .logo svg:nth-child(2){
+    display: none;
+  }
+  .main-menu span, .main-menu .fa-plus, .menu .playlist{
+    display: none;
+  }
+  .icons{
+    align-items: center;
+  }
+  .user span, hr{
+    display: none;
+  }
+  .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .user svg{
+    margin-bottom: 10px;
+  }
 
+}
