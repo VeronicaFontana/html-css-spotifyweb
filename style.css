@@ -494,6 +494,14 @@ footer{
     width: calc(100% / 4 - 15px);
     margin: 20px 5px;
   }
+  .interface-container .for-you .row .col{
+    width: calc(50% / 2);
+    margin-right: 20px;
+  }
+  .interface-container .popular .row .col{
+    width: calc(50% / 2);
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 576px){
@@ -509,6 +517,7 @@ footer{
   .interface-container .recently .row .col{
     width: calc(100% / 2 - 30px);
   }
+  
   .main-menu .logo svg:nth-child(1){
     margin: 20px 15px;
     display: block;
